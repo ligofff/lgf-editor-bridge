@@ -1,0 +1,11 @@
+{
+  "name": "Unity.com.ligofff.lgf-editor-bridge.Editor.Tests",
+  "references": [
+    "Unity.com.ligofff.lgf-editor-bridge"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": []
+}
