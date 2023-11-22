@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+using Object = UnityEngine.Object;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -65,5 +69,13 @@ public static class EditorBridge
         AssetDatabase.DeleteAsset(AssetDatabase.GetAssetPath(asset));
 #endif
         return;
+    }
+
+    public static IEnumerable<Type> GetTypesDerivedFrom<T>()
+    {
+#if UNITY_EDITOR
+        return TypeCache.GetTypesDerivedFrom<T>();
+#endif
+        return Enumerable.Empty<Type>();
     }
 }
