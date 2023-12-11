@@ -78,4 +78,12 @@ public static class EditorBridge
 #endif
         return Enumerable.Empty<Type>();
     }
+
+    public static Object GetCorrespondingObjectFromSource(Object obj)
+    {
+#if UNITY_EDITOR
+        return PrefabUtility.GetCorrespondingObjectFromSource(obj);
+#endif
+        return null;
+    }
 }
